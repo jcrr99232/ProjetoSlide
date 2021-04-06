@@ -1,8 +1,8 @@
 export default class Slide {
   constructor(slide, wrapper) {
-    this.slide = document.querySelector(slide)
+    this.slide = document.querySelector(slide);
     this.wrapper = document.querySelector(wrapper);
-    this.dist = { finalPosition: 0, startX: 0, movement: 0 }
+    this.dist = { finalPosition: 0, startX: 0, movement: 0 };
   }
 
   moveSlide(distX) {
@@ -11,7 +11,7 @@ export default class Slide {
   }
 
   updatePosition(clientX) {
-    this.dist.movement = (this.dist.startX - clientX) * 1.6;
+    this.dist.movement = (this.dist.startX - clientX) * 1.7;
     return this.dist.finalPosition - this.dist.movement;
   }
 
